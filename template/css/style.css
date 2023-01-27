@@ -1,0 +1,86 @@
+:root{
+    --main-color: #009688;
+}
+/* END OF MAIN Variables */
+/* START OF GLOBAL STYLES */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body{
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+.custom-green-btn,
+.custom-green-input{
+    color: var(--main-color);
+    background: transparent;
+    border: 1px solid var(--main-color);
+    outline: 0
+}
+.custom-green-input:focus{
+    color: var(--main-color);
+    background: transparent;
+    outline: 0;
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+.custom-green-input::placeholder{
+    color: #084e47c7
+}
+.custom-green-btn:hover,
+.custom-green-btn:active,
+.custom-green-btn:focus{
+    color: #fff;
+    background: var(--main-color);
+}
+/* END OF GLOBAL STYLES */
+
+/*  START OF SPLASH SCREEN STYLES */
+.splash-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height:100%;
+    background-color: #f8f8f8;
+}
+.splash-screen .splash-screen-main{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    width:100%;
+}
+.splash-screen .splash-screen-main .splash-screen-main-title{
+    font-size: 172px;
+    font-weight: 700;
+    color: var(--main-color);
+    display:block
+}
+.splash-screen .splash-screen-main .splash-screen-main-quote{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.splash-screen .splash-screen-footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.splash-screen .splash-screen-footer span{
+    font-size: 14px;
+}
+.splash-screen .splash-screen-footer span sup,
+.splash-screen .splash-screen-footer span strong{
+    color:var(--main-color);
+}
+/*  END OF SPLASH SCREEN STYLES */
+
+
