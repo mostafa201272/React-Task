@@ -17,6 +17,30 @@ body{
 ::-webkit-scrollbar{
     width: 0;
 }
+
+.custom-btn,
+.custom-input{
+    color: var(--main-color);
+    background: transparent;
+    border: 1px solid var(--main-color);
+    outline: 0
+}
+.custom-input:focus{
+    color: var(--main-color);
+    background: transparent;
+    outline: 0;
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+.custom-input::placeholder{
+    color: #084e47c7
+}
+.custom-btn:hover,
+.custom-btn:active,
+.custom-btn:focus{
+    color: #fff;
+    background: var(--main-color);
+}
 /* END OF GLOBAL STYLES */
 
 /*  START OF SPLASH SCREEN STYLES */
@@ -191,7 +215,7 @@ body{
 .site-container .main-page .pages-container{
     margin-top: 35px;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 120px);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -234,6 +258,105 @@ body{
 .site-container .main-page .pages-container .create-customer-page{
     display: none;
 }
+
+.site-container .main-page .pages-container .create-customer-page .steps-slider{
+    display: flex;
+    justify-content: center;
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid var(--main-color);
+    font-size: 24px;
+    color: var(--main-color);
+    margin-right: 95px;
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step.active{
+    color: #fff;
+    background-color: var(--main-color);
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -101%;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step.active-bar::after{
+    background-color: var(--main-color);
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step:last-child:after{
+    content: none;
+}
+
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step .step-title{
+    position: absolute;
+    bottom: -15px;
+    top: auto;
+    left: 50%;
+    color: var(--main-color);
+    font-size: 16px;
+    transform: translate(-50%, 15px);
+}
+.site-container .main-page .pages-container .create-customer-page .steps-slider .step.active .step-title{
+    font-weight: 600;
+}
+.site-container .main-page .pages-container .create-customer-page  .form-step{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px #e3e0e0;
+    display: none;
+}
+.site-container .main-page .pages-container .create-customer-page  .form-step.active{
+    display: block;
+}
+
+.site-container .main-page .pages-container .create-customer-page .form-step label{
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.site-container .main-page .pages-container .create-customer-page  .form-step input{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    min-height: 45px;
+}
+.site-container .main-page .pages-container .create-customer-page .form-step input:focus,
+.site-container .main-page .pages-container .create-customer-page .form-step input:focus-visible{
+    outline: 0;
+    box-shadow: none;
+}
+
+.site-container .main-page .pages-container .create-customer-page .form-step .form-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.site-container .main-page .pages-container .create-customer-page .form-step .form-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 45px;
+}
+
 /* START OF REATE CUSTOMER PAGE STYLES  */
 
 

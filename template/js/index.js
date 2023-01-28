@@ -28,7 +28,18 @@ $(function(){
         $("#create-customer-page").fadeIn().siblings().fadeOut()
     });
 
+    // Next Form
+    $(document).on('click', '#btn-next', function(){
+        $(this).closest('.form-step').removeClass('active').next().addClass('active');
+        $(".steps-slider .active").last().addClass('active-bar');
+        $(".steps-slider .active").last().next().addClass('active');
+    })
     
-
+    // Previous Form
+    $(document).on('click', '#btn-prev', function(){
+        $(this).closest('.form-step').removeClass('active').prev().addClass('active');
+        $(".steps-slider .active").last().prev().removeClass('active-bar');
+        $(".steps-slider .active").last().removeClass('active');
+    })
 });
 
