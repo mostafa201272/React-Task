@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+// Components
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+
+// Pages
+import CreateCustomer from './Pages/CreateCustomerPage/CreateCustomerPage';
+import Home from './Pages/Home/HomePage';
+import RootPage from './Pages/RootPage/RootPage';
+import Splash from './Pages/SplashScreen/Splash';
+
+// Styles
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+
+// Routes
+const routers = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootPage />,
+    children: [
+      {path: '/', element: <Home />},
+      {path: '/create-customer', element: <CreateCustomer />},
+    ]
+  }
+])
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Loading Splash Screen */}
+      <Splash />
+
+      {/* Routers */}
+      <RouterProvider router={routers} />
+    </>
   );
 }
 

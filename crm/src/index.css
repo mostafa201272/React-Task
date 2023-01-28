@@ -1,13 +1,20 @@
-body {
+:root{
+  --main-color: #009688;
+}
+/* END OF MAIN Variables */
+/* START OF GLOBAL STYLES */
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #f8f8f8 !important;
+  position: relative;
 }
+::-webkit-scrollbar{
+  width: 0;
+}
+/* END OF GLOBAL STYLES */
